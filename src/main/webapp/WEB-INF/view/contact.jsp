@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8" isELIgnored="false"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <!doctype html>
 <html lang="en">
 
@@ -69,16 +71,32 @@
                 <div class="col-lg-9">
                     <form action="${pageContext.request.contextPath}/client/saveContact" method="post" class="row contact_form" action="${pageContext.request.contextPath}/ContactServlet" method="post" id="contactForm" novalidate="novalidate">
                         <div class="col-md-6">
+                            
+                            <c:forEach var="err" items="${errors }">
+                            	<c:if test="${err.field=='name' }"> ${err.defaultMessage }</c:if>
+                            </c:forEach>
                             <div class="form-group">
                                 <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name">
                             </div>
+                            
+                            <c:forEach var="err" items="${errors }">
+                            	<c:if test="${err.field=='email' }"> ${err.defaultMessage }</c:if>
+                            </c:forEach>
                             <div class="form-group">
                                 <input type="email" class="form-control" id="email" name="email" placeholder="Enter email address">
                             </div>
+                            
+                            <c:forEach var="err" items="${errors }">
+                            	<c:if test="${err.field=='subject' }"> ${err.defaultMessage }</c:if>
+                            </c:forEach>
                             <div class="form-group">
                                 <input type="text" class="form-control" id="subject" name="subject" placeholder="Enter Subject">
                             </div>
                         </div>
+                        
+                        <c:forEach var="err" items="${errors }">
+                            	<c:if test="${err.field=='message' }"> ${err.defaultMessage }</c:if>
+                            </c:forEach>
                         <div class="col-md-6">
                             <div class="form-group">
                                 <textarea class="form-control" name="message" id="message" rows="1" placeholder="Enter Message"></textarea>

@@ -38,7 +38,7 @@
 							<h5 class="text-uppercase">senior wordpress developer</h5>
 							<div class="d-flex align-items-center">
 								<a class="primary_btn" href="${pageContext.request.contextPath}/contact.html"><span>Hire Me</span></a>
-								<a class="primary_btn tr-bg" href="#"><span>Get CV</span></a>
+								<a class="primary_btn tr-bg" href="${pageContext.request.contextPath}/client/downloadResume"><span>Get CV</span></a>
 							</div>
 						</div>
 					</div>
@@ -77,7 +77,7 @@
 							is in beast beginning signs open god you're gathering whose gathered cattle let. 
 							Creature whales fruit unto meat the life beginning all in under give two.
 						</p>
-						<a class="primary_btn" href="#"><span>Download CV</span></a>
+						<a class="primary_btn" href="${pageContext.request.contextPath}/client/downloadResume"><span>Download CV</span></a>
 					</div>
 				</div>
 			</div>

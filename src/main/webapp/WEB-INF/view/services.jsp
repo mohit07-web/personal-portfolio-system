@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <!doctype html>
 <html lang="en">
 
@@ -57,34 +59,18 @@
                 </div>
             </div>
             <div class="row feature_inner">
+            
+            <c:forEach var="service" items="${listOfServices}">
                 <div class="col-lg-3 col-md-6">
                     <div class="feature_item">
-                        <img src="${pageContext.request.contextPath}/img/services/s1.png" alt="">
-                        <h4>Wp developing</h4>
-                        <p>Creeping for female light years that lesser can't evening heaven isn't bearing tree</p>
+                        <img style=" width:100%; height: auto" src="${pageContext.request.contextPath}/img/services/${service.filename}" alt="">
+                        <h4>${service.title}</h4>
+                        <p> ${service.description}</p>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="feature_item">
-                        <img src="${pageContext.request.contextPath}/img/services/s2.png" alt="">
-                        <h4>UI/ux design</h4>
-                        <p>Creeping for female light years that lesser can't evening heaven isn't bearing tree</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="feature_item">
-                        <img src="${pageContext.request.contextPath}/img/services/s3.png" alt="">
-                        <h4>Web design</h4>
-                        <p>Creeping for female light years that lesser can't evening heaven isn't bearing tree</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="feature_item">
-                        <img src="${pageContext.request.contextPath}/img/services/s4.png" alt="">
-                        <h4>seo optimize</h4>
-                        <p>Creeping for female light years that lesser can't evening heaven isn't bearing tree</p>
-                    </div>
-                </div>
+               </c:forEach>
+               
+                
             </div>
         </div>
     </section>

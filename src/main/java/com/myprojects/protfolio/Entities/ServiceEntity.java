@@ -25,7 +25,7 @@ public class ServiceEntity {
 	@Column(length = 30)
 	private String title;
 	
-	@Column(length = 80)
+	@Column(length = 100)
 	private String description;
 
 	@Column(length = 300)
